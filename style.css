@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(7, 177, 243);
+    color: rgb(10, 4, 6);
+    font-weight: bolder;
+    height: 33px;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gamecontainer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container{
+    padding: 3vw;
+    display:grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    postion: relative;
+}
+
+.container div{
+    border: 2px solid black;
+    font-size: 8vw;
+    color: rgb(5, 1, 1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+}
+
+.line{
+    width : 0;
+    height: 0px;
+    position: absolute;    
+}
+
+.box:hover{
+    background-color: rgb(196, 241, 106);
+}
+
+.gameinfo{
+    padding: 50px 45px;
+}
+
+.info{
+    margin: 7px ;
+}
+
+#reset{
+    margin: 0px 6px;
+    padding: 3px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 0;
+    color: #fffffa;
+    background-color: #2e649d;
+}
+
+.Bl{
+    border-left: none !important;
+}
+
+.Br{
+    border-right: none !important;
+}
+
+.Bt{
+    border-top: none !important;
+}
+
+.Bb{
+    border-bottom: none !important;
+}
+
+.image img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width : 774px)
+{
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+
+    .gameinfo h1{
+        font-size: 1.4rem;
+    }
+
+    .container{
+        grid-template-rows: repeat(3,16vw);
+        grid-template-columns: repeat(3,16vw);
+    }
+    .Mytictac{
+        font-size: 2px;
+    }
+}
